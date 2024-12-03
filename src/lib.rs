@@ -41,3 +41,21 @@ pub fn to_binary32(mut number: i32) -> [u8; 32] {
     let binary: [u8; 32] = mut_binary; // make it immutable
     binary //and finally return it
 }
+
+//trail_division
+//this function take a u64 number and define the number is prime or not
+//this function return false for all the numbers less than 2
+pub fn trail_division(number: u64) -> bool {
+    let mut boolean = true;
+    if number < 2 {
+        boolean = false;
+    }else {
+        let square_root: u64 = (number as f64).sqrt().floor() as u64;
+        for i in 2..=square_root{
+            if number % i == 0{
+                boolean = false;
+            }
+        }
+    }
+    boolean
+}
