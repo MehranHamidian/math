@@ -1,8 +1,0 @@
-[package]
-name = "mmath"
-version = "0.1.0"
-edition = "2021"
-description = "a math library for rust projects"
-license = "GPL-3.0"
-
-[dependencies]
